@@ -1,0 +1,42 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "window.zoomLevel": 0,
+    "window.openFilesInNewWindow": "off",
+
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 16,
+    "editor.glyphMargin": true,
+    "editor.renderIndentGuides": true,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.dragAndDrop": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    "workbench.iconTheme": "vscode-icons",
+
+    "debug.inlineValues": true,
+
+    "go.buildOnSave": true,
+    "go.lintOnSave": true,
+    "go.vetOnSave": true,
+    "go.buildFlags": [],
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.formatOnSave": true,
+    "go.formatTool": "gofmt",
+    "go.formatFlags": ["-s"],
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "**/bin/": true,
+        "**/obj/": true,
+        "**/publish/": true,
+        "**/project.lock.json": true
+    }
+}
