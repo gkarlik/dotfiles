@@ -18,8 +18,17 @@ require("lspconfig").gopls.setup({
 	},
 })
 
+require('lspconfig').omnisharp.setup({
+    cmd = { "/home/gkarlik/.cache/omnisharp-vim/omnisharp-roslyn/run", "--languageserver" , "--hostPID", tostring(pid) },
+    init_options = {documentFormatting = true, codeAction = false},
+})
+
 local saga = require('lspsaga')
-saga.init_lsp_saga()
+saga.init_lsp_saga({
+    code_action_prompt = {
+        enable = false
+    }
+})
 
 require("indent_blankline").setup {
 	show_end_of_line = true,
