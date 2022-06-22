@@ -1,20 +1,17 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.inlayHints.enabled": true,
     "security.workspace.trust.enabled": false,
-    // editor
     "breadcrumbs.enabled": true,
-    "debug.inlineValues": true,
-    "editor.fontFamily": "JetBrains Mono Light",
+    "debug.inlineValues": "on",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 16,
-    "editor.suggestFontSize": 16,
+    "editor.suggestFontSize": 0,
     "editor.glyphMargin": true,
-    "editor.renderIndentGuides": true,
     "editor.renderLineHighlight": "all",
-    "editor.highlightActiveIndentGuide": true,
     "editor.fontLigatures": true,
     "editor.minimap.enabled": true,
     "editor.dragAndDrop": true,
+    "editor.inlayHints.enabled": "on",
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
     "editor.rulers": [
@@ -24,7 +21,11 @@
     "editor.suggest.showStatusBar": true,
     "editor.suggest.insertMode": "replace",
     "editor.scrollBeyondLastLine": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": true,
     "files.defaultLanguage": "${activeEditorLanguage}",
@@ -43,21 +44,19 @@
     },
     "problems.decorations.enabled": false,
     "search.exclude": {
-        "**/build/": true,
+        //"**/build/": true,
         "**/template/": true
     },
     "telemetry.telemetryLevel": "off",
-    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "terminal.integrated.fontSize": 18,
     "window.openFilesInNewWindow": "off",
     "window.titleBarStyle": "custom",
     "workbench.editor.openSideBySideDirection": "right",
     "workbench.startupEditor": "none",
-    "workbench.panel.defaultLocation": "bottom",
-    "workbench.iconTheme": "vscode-icons",
     "workbench.settings.editor": "json",
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.tree.indent": 15,
+    "workbench.tree.indent": 8,
     // golang
     "go.buildOnSave": "off",
     "go.lintOnSave": "workspace",
@@ -68,6 +67,18 @@
     "go.vetFlags": [],
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
+    "go.coverOnSave": true,
+    "go.coverOnSingleTest": true,
+    "go.coverOnSingleTestFile": true,
+    "go.coverageDecorator": {
+        "type": "gutter",
+        "coveredHighlightColor": "rgba(64,128,128,0.5)",
+        "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+        "coveredBorderColor": "rgba(64,128,128,0.5)",
+        "uncoveredBorderColor": "rgba(128,64,64,0.25)",
+        "coveredGutterStyle": "slashgreen", // "blockblue",
+        "uncoveredGutterStyle": "slashred"
+    },
     "[go]": {
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
@@ -81,15 +92,12 @@
         "deepCompletion": true,
         "staticcheck": true,
         "codelenses": {
-            "gc_details": true
+            "gc_details": true,
         },
     },
     // git & gitlens
     "git.autofetch": false,
     "git.enableSmartCommit": true,
-    //"gitlens.advanced.telemetry.enabled": false,
-    //"gitlens.views.fileHistory.enabled": true,
-    // "gitlens.views.lineHistory.enabled": true,
     "gitlens.keymap": "chorded",
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -98,8 +106,6 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        //"suppressResultsExplorerNotice": false,
-        //"suppressShowKeyBindingsNotice": true
     },
     // yaml
     "yaml.schemas": {
@@ -110,8 +116,6 @@
     },
     // rest client
     "rest-client.enableTelemetry": false,
-    // dotnet test explorer
-    //"dotnet-test-explorer.enableTelemetry": false,
     // vs-kubernetes
     "vs-kubernetes": {
         "vs-kubernetes.helm-path": "/home/gkarlik/.vs-kubernetes/tools/helm/linux-amd64/helm",
@@ -122,33 +126,6 @@
     },
     // typescript
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.colorTheme": "IntelliJ-ish Darcula",
-    "workbench.colorCustomizations": {
-        // "activityBarBadge.background": "#84FFFF",
-        // "activityBar.activeBorder": "#84FFFF",
-        // "list.activeSelectionForeground": "#84FFFF",
-        // "list.inactiveSelectionForeground": "#84FFFF",
-        // "list.highlightForeground": "#84FFFF",
-        // "scrollbarSlider.activeBackground": "#84FFFF50",
-        // "editorSuggestWidget.highlightForeground": "#84FFFF",
-        // "textLink.foreground": "#84FFFF",
-        // "progressBar.background": "#84FFFF",
-        // "pickerGroup.foreground": "#84FFFF",
-        // "tab.activeBorder": "#84FFFF",
-        // "notificationLink.foreground": "#84FFFF",
-        // "editorWidget.resizeBorder": "#84FFFF",
-        // "editorWidget.border": "#84FFFF",
-        // "settings.modifiedItemIndicator": "#84FFFF",
-        // "settings.headerForeground": "#84FFFF",
-        // "panelTitle.activeBorder": "#84FFFF",
-        // "breadcrumb.activeSelectionForeground": "#84FFFF",
-        // "menu.selectionForeground": "#84FFFF",
-        // "menubar.selectionForeground": "#84FFFF",
-        // "editor.findMatchBorder": "#84FFFF",
-        // "selection.background": "#84FFFF40"
-    },
-    // "materialTheme.accent": "Sky",
-    "python.pythonPath": "/bin/python",
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -162,7 +139,8 @@
         "editor.wordBasedSuggestions": false
     },
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+        "*.ipynb": "jupyter-notebook",
+        "*.wasm": "default"
     },
     "go.toolsManagement.autoUpdate": true,
     "yaml.maxItemsComputed": 100,
@@ -171,8 +149,116 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "editor.formatOnSave": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "fixme",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "bug",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "review",
+            "color": "#CDDC39",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "testme",
+            "color": "#CDDC39",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "optimize",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "docme",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
     "monkeyC.developerKeyPath": "/root/dev/WatchTestApp/developer_key.der",
-    "workbench.enableExperiments": false
+    "workbench.enableExperiments": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "workbench.colorTheme": "JetBrains Darcula Theme",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "workbench.iconTheme": "jetbrains-icons",
+    "sqltools.connections": [],
+    "azureResourceGroups.groupBy": "resourceGroup",
 }

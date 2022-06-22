@@ -20,20 +20,24 @@ syntax on
 
 call plug#begin()
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ap/vim-css-color'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'neoclide/coc.nvim'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-fugitive'
@@ -42,9 +46,12 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-commentary'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
 
+set completeopt=menu,menuone,noselect
 set encoding=UTF-8
 set fileencoding=utf-8
 set termencoding=utf-8
@@ -52,15 +59,13 @@ set termencoding=utf-8
 nnoremap <leader>nt <cmd>:NERDTreeToggle<CR>
 nnoremap <leader>nf <cmd>:NERDTreeFocus<CR>
 
+nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-inoremap <silent><expr> <c-space> coc#refresh()
-
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
-set completeopt=longest,menuone
 
 let g:airline_powerline_fonts = 1
 
@@ -74,7 +79,6 @@ let g:go_highlight_function_calls = 1
 let g:go_auto_type_info = 1
 
 let g:OmniSharp_highlighting = 0
-let g:coc_sources_disable_map = { 'cs': ['cs-1', 'cs-2', 'cs-3'] }
 
 let g:airline#extensions#tabline#enabled = 1
 
