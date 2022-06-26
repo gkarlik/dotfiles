@@ -16,6 +16,7 @@ set cc=100
 set scrolloff=10
 set hlsearch!
 set termguicolors
+set nowrap
 syntax on
 
 call plug#begin()
@@ -64,6 +65,15 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fds <cmd>Telescope lsp_document_symbols<cr>
+nnoremap <leader>fws <cmd>Telescope lsp_workspace_symbols<cr>
+
+nnoremap <leader>gd <cmd>OmniSharpGotoDefinition<cr>
+
+nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 
@@ -79,6 +89,8 @@ let g:go_highlight_function_calls = 1
 let g:go_auto_type_info = 1
 
 let g:OmniSharp_highlighting = 0
+let g:OmniSharp_server_use_mono = 0
+let g:OmniSharp_server_use_net6 = 1
 
 let g:airline#extensions#tabline#enabled = 1
 

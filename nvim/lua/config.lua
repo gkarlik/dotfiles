@@ -20,8 +20,37 @@ require("lspconfig").gopls.setup({
 })
 
 require('lspconfig').omnisharp.setup({
-    cmd = { "/home/gkarlik/.cache/omnisharp-vim/omnisharp-roslyn/run", "--languageserver" , "--hostPID", tostring(pid) },
+    cmd = { "/home/gkarlik/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp", "--languageserver" , "--hostPID", tostring(pid) },
     init_options = {documentFormatting = true, codeAction = false},
+})
+
+require('lspconfig').yamlls.setup({
+    capabilities = capabilities,
+    settings = {
+        yaml = {
+            schemas = {
+                ["kubernetes"] = "*.yaml",
+            },
+            format = { enable = true },
+            schemaStore = {
+                 url = "https://www.schemastore.org/api/json/catalog.json",
+                 enable = true,
+            },
+            completion = true,
+            validate = true
+        }
+    }
+})
+
+require('lspconfig').rust_analyzer.setup({
+    capabilities=capabilities,
+    settings = {
+      ["rust-analyzer"] = {
+        checkOnSave = {
+          command = "clippy"
+        },
+      }
+    }
 })
 
 local saga = require('lspsaga')
