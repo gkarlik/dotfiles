@@ -53,13 +53,6 @@ require('lspconfig').rust_analyzer.setup({
     }
 })
 
-local saga = require('lspsaga')
-saga.init_lsp_saga({
-    code_action_prompt = {
-        enable = false
-    }
-})
-
 require("indent_blankline").setup {
 	show_end_of_line = true,
 	space_char_blankline = " ",

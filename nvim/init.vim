@@ -46,9 +46,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-commentary'
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'iamcco/markdown-preview.nvim'
 
 call plug#end()
 
